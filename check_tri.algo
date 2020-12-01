@@ -1,0 +1,19 @@
+ALGORITHM search_insertion
+VAR
+    i : INTEGER:=2;
+    tab : ARRAY_OF INTEGER[20];
+    j, k: INTEGER;
+
+BEGIN
+WHILE (i<tab.length-1) DO
+    read(tab[i]);
+    j:=i-1;
+    WHILE (tab[i]<=tab[j]) DO
+        tab[j]:=tab[j-1];
+        j:=j-1;
+    END_WHILE
+    tab[j]:=tab[i];
+    i:=i+1;
+END_WHILE
+
+END
